@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a8296bb520.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <title>Weather | Jordana Makin</title>
+  </head>
+  <body>
+    <div class="container-sm app">
+      <div class="card searchBox">
+          <form>
+            <input type="text" placeholder="Search city" class="search-city" />
+            <input type="submit" value="Search weather " class="btn-weather" />
+            <input type="button" value="Use location 📍" class="btn-location" />
+          </form>
+      </div>
+
+      <div class="col">
+        <div class="card mainContent">
+          <h1 class="city">Nottingham, UK</h1>
+          <h2 class="time">Time</h2>
+          <h3 class="date">7th August</h3>
+          <img src="assets/icons/011-cloud.svg" class="mainWeather" />
+          <h3 class="degrees">18°C</h3>
+          <div class="units">
+        <a href="#" id="celsius">
+          °C |
+        </a>
+        <a href="#" id="farenheit">
+          °F
+        </a>
+      </div>
+
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body features">
+                  <img
+                    src="assets/icons/008-weather.svg"
+                    class="weatherFeatures"
+                  />
+                  <p class="card-text">18° / 13°</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body features">
+                  <img
+                    src="assets/icons/049-umbrella.svg"
+                    class="weatherFeatures"
+                  />
+                  <p class="card-text">83%</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body features">
+                  <img
+                    src="assets/icons/051-wind sign.svg"
+                    class="weatherFeatures"
+                  />
+                  <p class="card-text">11.2mph | S</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="card-body features">
+                  <img
+                    src="assets/icons/030-sunsets.svg"
+                    class="weatherFeatures"
+                  />
+                  <p class="card-text">20:48</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-sm">
+        <div class="col">
+          <div class="card">
+            <div class="row">
+              <div class="col">
+                <h4>5 day forecast</h4>
+              </div>
+              <div class="row">
+                <div class="row justify-content-md-center">
+                  <div class="col-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text">
+                          <h6>Tomorrow</h6>
+                            <img
+                            src="assets/icons/002-rain.svg"
+                            class="fiveDay"
+                          />
+                          18°c
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text">
+                            <h6>Monday</h6>
+                          <img
+                            src="assets/icons/058-thunder.svg"
+                            class="fiveDay"
+                          />
+                          20°c
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text">
+                            <h6>Tuesday</h6>
+                          <img
+                            src="assets/icons/011-cloud.svg"
+                            class="fiveDay"
+                          />
+                          21°c
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text">
+                            <h6>Wednesday</h6>
+                          <img
+                            src="assets/icons/024-cumulus.svg"
+                            class="fiveDay"
+                          />
+                          23°c
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text">
+                            <h6>Thursday</h6>
+                          <img
+                            src="assets/icons/013-cloudy.svg"
+                            class="fiveDay"
+                          />
+                          24°c
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/javascript.js"></script>
+  </body>
+</html>

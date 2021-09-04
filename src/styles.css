@@ -1,0 +1,49 @@
+body {
+  margin: 50px 150px;
+  font-family: "Maven Pro", sans-serif;
+  background: linear-gradient(to top, #8bbcf3 0%, #e7f0fd 100%);
+  color: #34495e;
+  text-align: center;
+}
+
+h1,
+h4,
+h6 {
+  font-weight: bold;
+}
+
+h4 {
+  padding: 10px;
+}
+
+p {
+  color: darkslategray;
+  display: block;
+}
+
+.card {
+  margin: 10px;
+}
+.mainWeather {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.features {
+  margin: 10px;
+}
+
+.fiveDay {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.weatherFeatures {
+  width: 60px;
+}
+
+.searchBox {
+  padding: 10px;
+  text-align: unset;
+}
