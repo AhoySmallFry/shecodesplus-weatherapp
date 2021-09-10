@@ -107,6 +107,11 @@ function showWeather(response) {
   let minutes = "0" + date.getMinutes();
   let formattedTime = hours + ":" + minutes.substr(-2);
   sunsetElement.innerHTML = `${formattedTime}`;
+
+  let highLowElement = document.querySelector("#high-low");
+  highLowElement.innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}° / ${Math.round(response.data.main.temp_min)}°`;
 }
 
 function retrievePosition(position) {
