@@ -90,6 +90,12 @@ function showWeather(response) {
 
   let descriptionElement = document.querySelector(".weather-description");
   descriptionElement.innerHTML = `${response.data.weather[0].description}`;
+
+  let windElement = document.querySelector("#windSpeed");
+  let windDirection = document.querySelector("windDirection");
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} kmh | ${
+    response.data.wind.deg
+  }°`;
 }
 
 function retrievePosition(position) {
