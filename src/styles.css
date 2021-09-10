@@ -22,6 +22,16 @@ p {
 }
 .weather-description {
   text-transform: capitalize;
+  font-size: x-large;
+}
+
+.mainTempValue {
+  font-size: 28px;
+}
+
+.units {
+  font-weight: lighter;
+  font-size: small;
 }
 
 .card {
