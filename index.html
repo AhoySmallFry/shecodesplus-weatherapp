@@ -27,159 +27,154 @@
   <body>
     <div class="container-sm app">
       <div class="card searchBox">
-          <form>
-            <input type="text" placeholder="Search city" class="search-city" />
-            <input type="submit" value="Search weather " class="btn-weather" />
-            <input type="button" value="Use location 📍" class="btn-location" />
-          </form>
-      </div>
-
-      <div class="col">
-        <div class="card mainContent">
-          <h1 class="city">Nottingham, UK</h1>
-          <h2 class="time">Time</h2>
-          <h3 class="date">7th August</h3>
-          <img src="assets/icons/011-cloud.svg" class="mainWeather" />
-          <div class="degrees">
-            <span class="mainTempValue">18°C</span>
-            <p class="weather-description">Sunny</p> 
-            <div class="units">
-              <a href="#" id="celsius">
-              °C |
-              </a>
-              <a href="#" id="farenheit">
-              °F
-              </a> 
+        <form>
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="search"
+                placeholder="Search city..."
+                class="search-city form-control"
+              />
             </div>
-              
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search weather "
+                class="btn-weather btn btn-primary"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="button"
+                value="Use location 📍"
+                class="btn-location btn btn-outline-primary"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card mainContent">
+        <h1 class="city">Nottingham, UK</h1>
+        <h2 class="time">Time</h2>
+        <h3 class="date">7th August</h3>
+        <img src="assets/icons/011-cloud.svg" class="mainWeather" />
+        <div class="degrees">
+          <span class="mainTempValue">18°C</span>
+          <p class="weather-description">Sunny</p>
+          <div class="units">
+            <a href="#" id="celsius"> °C | </a>
+            <a href="#" id="farenheit"> °F </a>
+          </div>
         </div>
 
-          <div class="row">
-            <div class="col-sm-3">
-              <div class="card">
-                <div class="card-body features">
-                  <img
-                    src="assets/icons/008-weather.svg"
-                    class="weatherFeatures"
-                  />
-                  <p class="card-text" id="high-low">18° / 13°</p>
-                </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body features">
+                <img
+                  src="assets/icons/008-weather.svg"
+                  class="weatherFeatures"
+                />
+                <p class="card-text" id="high-low">18° / 13°</p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="card">
-                <div class="card-body features">
-                  <img
-                    src="assets/icons/049-umbrella.svg"
-                    class="weatherFeatures"
-                  />
-                  <p class="card-text" id="precipitation">83%</p>
-                </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body features">
+                <img
+                  src="assets/icons/049-umbrella.svg"
+                  class="weatherFeatures"
+                />
+                <p class="card-text" id="precipitation">83%</p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="card">
-                <div class="card-body features">
-                  <img
-                    src="assets/icons/051-wind sign.svg"
-                    class="weatherFeatures"
-                  />
-                  <p class="card-text" id="windSpeed">11.2mph | S</p>
-                </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body features">
+                <img
+                  src="assets/icons/051-wind sign.svg"
+                  class="weatherFeatures"
+                />
+                <p class="card-text" id="windSpeed">11.2mph | S</p>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="card">
-                <div class="card-body features">
-                  <img
-                    src="assets/icons/030-sunsets.svg"
-                    class="weatherFeatures"
-                  />
-                  <p class="card-text" id="sunsetTime">20:48</p>
-                </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body features">
+                <img
+                  src="assets/icons/030-sunsets.svg"
+                  class="weatherFeatures"
+                />
+                <p class="card-text" id="sunsetTime">20:48</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container-sm">
-        <div class="col">
-          <div class="card">
+    <div class="container-sm">
+      <div class="col">
+        <div class="card">
+          <div class="row">
+            <div class="col">
+              <h4>5 day forecast</h4>
+            </div>
             <div class="row">
-              <div class="col">
-                <h4>5 day forecast</h4>
-              </div>
-              <div class="row">
-                <div class="row justify-content-md-center">
-                  <div class="col-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="card-text">
-                          <h6>Tomorrow</h6>
-                            <img
-                            src="assets/icons/002-rain.svg"
-                            class="fiveDay"
-                          />
-                          18°c
-                        </p>
-                      </div>
+              <div class="row justify-content-md-center">
+                <div class="col-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text"></p>
+                      <h6>Tomorrow</h6>
+                      <img src="assets/icons/002-rain.svg" class="fiveDay" />
+                      18°c
                     </div>
                   </div>
-                  <div class="col-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="card-text">
-                            <h6>Monday</h6>
-                          <img
-                            src="assets/icons/058-thunder.svg"
-                            class="fiveDay"
-                          />
-                          20°c
-                        </p>
-                      </div>
+                </div>
+                <div class="col-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text"></p>
+                      <h6>Monday</h6>
+                      <img src="assets/icons/058-thunder.svg" class="fiveDay" />
+                      20°c
                     </div>
                   </div>
-                  <div class="col-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="card-text">
-                            <h6>Tuesday</h6>
-                          <img
-                            src="assets/icons/011-cloud.svg"
-                            class="fiveDay"
-                          />
-                          21°c
-                        </p>
-                      </div>
+                </div>
+                <div class="col-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text"></p>
+                      <h6>Tuesday</h6>
+                      <img src="assets/icons/011-cloud.svg" class="fiveDay" />
+                      21°c
                     </div>
                   </div>
-                  <div class="col-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="card-text">
-                            <h6>Wednesday</h6>
-                          <img
-                            src="assets/icons/024-cumulus.svg"
-                            class="fiveDay"
-                          />
-                          23°c
-                        </p>
-                      </div>
+                </div>
+                <div class="col-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text"></p>
+                      <h6>Wednesday</h6>
+                      <img src="assets/icons/024-cumulus.svg" class="fiveDay" />
+                      23°c
                     </div>
                   </div>
-                  <div class="col-2">
-                    <div class="card">
-                      <div class="card-body">
-                        <p class="card-text">
-                            <h6>Thursday</h6>
-                          <img
-                            src="assets/icons/013-cloudy.svg"
-                            class="fiveDay"
-                          />
-                          24°c
-                        </p>
-                      </div>
+                </div>
+                <div class="col-2">
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text"></p>
+                      <h6>Thursday</h6>
+                      <img src="assets/icons/013-cloudy.svg" class="fiveDay" />
+                      24°c
                     </div>
                   </div>
                 </div>
