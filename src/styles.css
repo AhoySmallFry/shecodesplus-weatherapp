@@ -20,6 +20,9 @@ p {
   color: darkslategray;
   display: block;
 }
+.weather-description {
+  text-transform: capitalize;
+}
 
 .card {
   margin: 10px;

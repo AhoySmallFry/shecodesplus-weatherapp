@@ -87,6 +87,9 @@ function showWeather(response) {
 
   let h3 = document.querySelector(".degrees");
   h3.innerHTML = `${temperature}°C`;
+
+  let descriptionElement = document.querySelector(".weather-description");
+  descriptionElement.innerHTML = `${response.data.weather[0].description}`;
 }
 
 function retrievePosition(position) {
