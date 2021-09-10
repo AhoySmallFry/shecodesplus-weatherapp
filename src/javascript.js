@@ -96,6 +96,9 @@ function showWeather(response) {
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} kmh | ${
     response.data.wind.deg
   }°`;
+
+  let humidityElement = document.querySelector("#precipitation");
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
 }
 
 function retrievePosition(position) {
