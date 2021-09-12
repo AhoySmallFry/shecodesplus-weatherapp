@@ -21,10 +21,6 @@ p {
   display: block;
 }
 
-.mainContent {
-  margin: 100x;
-}
-
 .weather-description {
   text-transform: capitalize;
   font-size: x-large;
@@ -64,4 +60,8 @@ p {
 .searchBox {
   padding: 10px;
   text-align: unset;
+}
+
+.signature {
+  text-align: left;
 }
