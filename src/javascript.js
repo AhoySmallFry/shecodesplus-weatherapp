@@ -110,8 +110,8 @@ function showWeather(response) {
 
 function convertCelsius(event) {
   event.preventDefault();
-  let tempCelsius = document.querySelector(".degrees");
-  tempCelsius.innerHTML = "20°C";
+  let tempCelsius = document.querySelector(".mainTempValue");
+  tempCelsius.innerHTML = `${Math.round(mainTemp)}°C`;
 }
 
 let celsiusUnits = document.querySelector("#celsius");
