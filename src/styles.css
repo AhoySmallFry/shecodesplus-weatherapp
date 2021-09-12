@@ -20,6 +20,11 @@ p {
   color: darkslategray;
   display: block;
 }
+
+.mainContent {
+  margin: 100x;
+}
+
 .weather-description {
   text-transform: capitalize;
   font-size: x-large;
@@ -38,7 +43,7 @@ p {
   margin: 10px;
 }
 .mainWeather {
-  width: 200px;
+  width: 100px;
   margin: 0 auto;
 }
 
