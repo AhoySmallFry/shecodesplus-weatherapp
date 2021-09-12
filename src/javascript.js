@@ -46,26 +46,6 @@ currentDate.innerHTML = `${date}th ${month}`;
 
 //
 
-// degrees
-
-function convertCelsius(event) {
-  event.preventDefault();
-  let tempCelsius = document.querySelector(".degrees");
-  tempCelsius.innerHTML = "20°C";
-}
-
-let celsiusUnits = document.querySelector("#celsius");
-celsiusUnits.addEventListener("click", convertCelsius);
-
-function convertFarenheit(event) {
-  event.preventDefault();
-  let tempFarenheit = document.querySelector(".degrees");
-  tempFarenheit.innerHTML = "68.2°F";
-}
-
-let farenheitUnits = document.querySelector("#farenheit");
-farenheitUnits.addEventListener("click", convertFarenheit);
-
 // search box
 function getWeather(event) {
   event.preventDefault();
@@ -80,9 +60,14 @@ btnWeather.addEventListener("click", getWeather);
 
 //
 
+let mainTemp = null;
+
+//
+
 function showWeather(response) {
   let h1 = document.querySelector("h1");
-  let temperature = Math.round(response.data.main.temp);
+  mainTemp = response.data.main.temp;
+  let temperature = Math.round(mainTemp);
   h1.innerHTML = `${response.data.name}`;
 
   let h3 = document.querySelector(".mainTempValue");
@@ -120,6 +105,27 @@ function showWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+// degrees
+
+function convertCelsius(event) {
+  event.preventDefault();
+  let tempCelsius = document.querySelector(".degrees");
+  tempCelsius.innerHTML = "20°C";
+}
+
+let celsiusUnits = document.querySelector("#celsius");
+celsiusUnits.addEventListener("click", convertCelsius);
+
+function convertFarenheit(event) {
+  event.preventDefault();
+  let mainTempValue = document.querySelector(".mainTempValue");
+  let tempFarenheit = (mainTemp * 9) / 5 + 32;
+  mainTempValue.innerHTML = `${Math.round(tempFarenheit)}°F`;
+}
+
+let farenheitUnits = document.querySelector("#farenheit");
+farenheitUnits.addEventListener("click", convertFarenheit);
 
 function retrievePosition(position) {
   let apiKey = "7cd341f73bed1fbf392c5c5cd61542e9";
