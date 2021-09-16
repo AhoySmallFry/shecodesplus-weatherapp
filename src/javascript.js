@@ -49,6 +49,7 @@ currentDate.innerHTML = `${date}th ${month}`;
 // search box
 function getWeather(event) {
   event.preventDefault();
+
   let inputCity = document.querySelector(".search-city");
   let apiKey2 = "7cd341f73bed1fbf392c5c5cd61542e9";
   let url2 = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&units=metric&appid=${apiKey2}`;
