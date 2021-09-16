@@ -111,26 +111,35 @@ function showWeather(response) {
 //forecast
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecastDaily = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row justify-content-md-center">`;
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon  "];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecastDaily.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
      <div class="col-2">
        <div class="card">
          <div class="card-body">
           <p class="card-text"></p>
-          <h6>${day}</h6>
-          <img src="assets/icons/002-rain.svg" class="fiveDay" />
-          18°c
+          <h6>${formatDay(forecastDay.dt)}</h6>
+          <img src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png" class="fiveDay" />
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span> |
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
         </div>
       </div>
     </div>
 
 `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -175,6 +184,14 @@ function retrievePosition(position) {
 
 function displayCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
 
 let currentLocButton = document.querySelector(".btn-location");
